@@ -154,8 +154,7 @@ public class VolleyCacheActivity extends Activity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			Log.v("tag", "getView position  >>> :" + position
-					+ " convertView  :" + convertView);
+			
 			if (getItemViewType(position) == LIST_TYPE_LEFT) {
 				return getLeftView(position, convertView, parent);
 			} else {
@@ -251,7 +250,9 @@ public class VolleyCacheActivity extends Activity {
 			TextView infoTxt = null;
 		}
 	}
-
+	/**
+	 * 使用VolleyJsonObjectRequest获取网络数据
+	 */
 	private void getData() {
 		String url = "http://c.m.163.com/nc/article/headline/T1348647909107/0-20.html";
 		JsonObjectRequest jsonRequest = new JsonObjectRequest(url, null,
@@ -292,7 +293,7 @@ public class VolleyCacheActivity extends Activity {
 
 					@Override
 					public void onErrorResponse(VolleyError error) {
-//						Toast.makeText(VolleyCacheActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+						//Volley框架异常处理机制
 						Toast.makeText(VolleyCacheActivity.this, VolleyErrorHelper.getMessage(error, VolleyCacheActivity.this), Toast.LENGTH_SHORT).show();
 					}
 				});
