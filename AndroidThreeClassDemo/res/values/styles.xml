@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"></style>
+
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="w_match_h_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditTextStyle" parent="w_match_h_wrap">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/red_bg</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_smalll_style" parent="wrap_content">
+        <item name="android:textColor">@color/blue_bg</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="myActionBarTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/background_dark</item>
+    </style>
+
+    <style name="myActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/blue_bg</item>
+        <item name="android:titleTextStyle">@style/myActionBarTitleTextStyle</item>
+    </style>
+
+    <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/myActionBarStyle</item>
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">@dimen/bottom_tab_font_size</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:paddingTop">@dimen/bottom_tab_padding_up</item>
+        <item name="android:background">@drawable/home_btn_bg</item>
+        <item name="android:paddingBottom">2.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/bottom_tab_padding_drawable</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="view_pager_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="view_pager1_style" parent="view_pager_style">
+        <item name="android:textColor">@android:color/holo_green_light</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>

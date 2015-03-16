@@ -1,0 +1,16 @@
+1425431594832	Delete element
+1425523484636	Delete element
+1425537281123	Delete element
+1425537301211	Delete element
+1425537308176	Delete element
+1425545522810	Rename type 'ViewTest'
+1425545544078	Rename type 'SurfaceViewActivity'
+1425607568980	Rename field 'mMediaPlayer01'
+1425607587618	Rename field 'mTextView01'
+1425607720510	Rename field 'mSurfaceHolder01'
+1425607724603	Rename field 'mSurfaceView01'
+1425607845937	Rename type 'PlayvodActivity'
+1425609582199	Rename package 'com.scxh.android.ui.surfaceview'
+1425609592698	Rename package 'com.scxh.android.ui.surfaceview.video'
+1425609618289	Move compilation units
+1425609621109	Delete element

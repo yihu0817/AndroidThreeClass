@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10px" >
+
+    <TextView
+        android:id="@+id/text_kb_streamed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="mp3 Tutorial"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_stream_stop"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/button_stream_play"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/nextsong"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="Play Next Song" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/timepos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:paddingLeft="10px" />
+
+    <Button
+        android:id="@+id/button_play"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:text="Reset" />
+
+</LinearLayout>

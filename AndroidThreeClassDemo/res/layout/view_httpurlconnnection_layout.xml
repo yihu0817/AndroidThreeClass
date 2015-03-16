@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/showMessageTxtOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmHttpUrlConnectionClick"
+            android:text="获取服务端数据HttpClient Get方式" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmHttpClientClick"
+            android:text="获取服务端数据HttpClient POST方式" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmAndroidHttpClientGetClick"
+            android:text="通过Http网络封装类获取数据" />
+
+       <!--  <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmHttpUrlPostConnectionClick"
+            android:text="获取服务端数据HttpUrlConnection Post方式" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmHttpClientPostClick"
+            android:text="获取服务端数据HttpClient Post方式" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmAndroidHttpClientPostClick"
+            android:text="获取服务端数据 AndroidHttpClient Post方式" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onConfirmClick"
+            android:text="获取服务端数据 通过 HttpConnectUtil 网络封装类" />
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onJsonClick"
+            android:text="获取Json数据" /> -->
+    </LinearLayout>
+
+</ScrollView>

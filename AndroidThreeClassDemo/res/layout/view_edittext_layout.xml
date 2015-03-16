@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/backMessageTxt"
+        style="@style/EditTextStyle"
+        android:text="@string/init_text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/userNameTxt"
+            style="@style/text_smalll_style"
+            android:layout_alignParentLeft="true"
+            android:text="@string/user_name" />
+
+        <ImageView
+            android:id="@+id/userNameImg"
+            style="@style/wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/abc_ic_clear_search_api_holo_light" />
+
+        <EditText
+            android:id="@+id/userNameEdit"
+            style="@style/w_match_h_wrap"
+            android:layout_toLeftOf="@id/userNameImg"
+            android:layout_toRightOf="@id/userNameTxt"
+            android:background="@drawable/bg_search_text"
+            android:singleLine="true"
+            android:hint="请输入用户名"
+        
+            android:text="xinhua" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/passwordTxt"
+            style="@style/text_smalll_style"
+            android:layout_alignParentLeft="true"
+            android:text="密    码:" />
+
+        <ImageView
+            android:id="@+id/passwordImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/abc_ic_clear_search_api_holo_light" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/passwordImg"
+            android:layout_toRightOf="@id/passwordTxt"
+            android:background="@drawable/bg_search_textbox"
+            android:hint="请输入密码"
+            android:maxLength="6"
+            android:password="true"
+            android:text="123456" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="登录"
+        android:textSize="18sp" />
+
+</LinearLayout>

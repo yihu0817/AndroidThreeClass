@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<books>
+    <book>
+        <id>10001</id>
+        <name>Android编程思想</name>
+        <price>128.99</price>
+    </book> 
+    <book>
+        <id>10002</id>
+        <name>Android编程基础</name>
+        <price>44.99</price>
+    </book> 
+    <book>
+        <id>10003</id>
+        <name>AndroidJOSN技术</name>
+        <price>99.99</price>
+    </book> 
+    <book>
+        <id>10004</id>
+        <name>AndroidLauche详解</name>
+        <price>148.99</price>
+    </book>  
+    <book>
+        <id>10005</id>
+        <name>Android游戏开发</name>
+        <price>198.99</price>
+    </book>  
+</books>

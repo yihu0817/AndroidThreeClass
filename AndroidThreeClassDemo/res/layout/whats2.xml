@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/what_layout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/w02"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/view_pager_style"
+        android:text="\n按住就能说话\n聊天是如此简单轻松"/>
+
+</RelativeLayout>

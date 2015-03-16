@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/mybaselist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/holo_blue_dark"
+            android:dividerHeight="3dp" >
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/myProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            
+            
+            android:id="@+id/myTextViewBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据加载中..." />
+    </LinearLayout>
+
+</FrameLayout>

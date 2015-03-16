@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="TitleView">
+        <attr name="left_text" format="string"/>
+        <attr name="right_text" format="string"/>
+        <attr name="title_text" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="MyTextView">
+        <attr name="myColor" format="color"/>
+        <attr name="myFontSize" format="dimension"/>
+        <attr name="myText" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="PieChart">
+        <attr name="textcolor" format="color" />
+        <attr name="textsize" format="dimension" />
+        <attr name="content" format="string" />
+        <attr name="showTexts" format="boolean" />
+        <attr name="tabBackground" format="reference" />
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    
+    <string-array name="arraylist">
+        <item>1习近平：希望新西兰保障输华产品质量安全"</item>
+        <item>"2李克强同互联网大会代表座谈：严打网络侵权",</item>
+        <item>"3深陷“制毒”丑闻 奇虎360股价大跌5.1%",</item>
+        <item>"4任志强自曝是北京四号线第二大股东：十几年没利益", </item>
+        <item>"5习近平：希望新西兰保障输华产品质量安全",</item>
+        <item>"6李克强同互联网大会代表座谈：严打网络侵权", </item>
+        <item>"7深陷“制毒”丑闻 奇虎360股价大跌5.1%",</item>
+        <item>"8任志强自曝是北京四号线第二大股东：十几年没利益",</item>
+        <item>"9习近平：希望新西兰保障输华产品质量安全",</item>
+        <item>"10李克强同互联网大会代表座谈：严打网络侵权", </item>
+        <item>"11深陷“制毒”丑闻 奇虎360股价大跌5.1%",</item>
+        <item>"12任志强自曝是北京四号线第二大股东：十几年没利益",</item>
+        <item>"13习近平：希望新西兰保障输华产品质量安全",</item>
+        <item>"14李克强同互联网大会代表座谈：严打网络侵权", </item>
+        <item>"15深陷“制毒”丑闻 奇虎360股价大跌5.1%",</item>
+        <item>"16任志强自曝是北京四号线第二大股东：十几年没利益", </item>
+        <item>"17习近平：希望新西兰保障输华产品质量安全",</item>
+        <item>"18李克强同互联网大会代表座谈：严打网络侵权", </item>
+        <item>"19深陷“制毒”丑闻 奇虎360股价大跌5.1%",</item>
+        <item>"20任志强自曝是北京四号线第二大股东：十几年没利益"</item>
+    </string-array>
+	<string-array name="fun_dialog">
+        <item>电影</item>
+        <item>读书</item>
+        <item>音乐</item>
+        <item>打游戏</item>
+    </string-array>
+</resources>

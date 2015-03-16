@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- <dimen name="main_height">400dp</dimen> -->
+    <dimen name="gift_width">300dp</dimen>
+    <dimen name="gift_height">400dp</dimen>
+    <dimen name="gift_button_width">150dp</dimen>
+    <dimen name="advertisement_height">162dp</dimen>
+    
+    <!-- 商圈選擇 -->
+    <dimen name="cheap_business_l_height">40dp</dimen>
+    <dimen name="cheap_business_m_height">80dp</dimen>
+    <dimen name="cheap_business_h_height">120dp</dimen>
+    
+    <dimen name="cheap_business_item_w">80dp</dimen>
+</resources>

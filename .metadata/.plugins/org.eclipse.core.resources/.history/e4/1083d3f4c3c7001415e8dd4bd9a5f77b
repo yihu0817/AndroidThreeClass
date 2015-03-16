@@ -1,0 +1,114 @@
+package com.scxh.android.volley;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.android.volley.Request.Method;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonObject;
+import com.scxh.android.R;
+import com.scxh.android.util.HttpConnectionUtil;
+import com.scxh.android.util.HttpConnectionUtil.HttpConnectionCallback;
+import com.scxh.android.util.HttpConnectionUtil.HttpMethod;
+
+public class VolleyActivity extends Activity {
+	private static final String mHttpRequestString = "http://c.m.163.com/nc/article/headline/T1348647909107/0-20.html";
+	private TextView mContentTxt;
+	private Button mStringBtn;
+	private RequestQueue mQueue;
+//	private String mHttpUrl = "http://mp3.baidu.com/dev/api/?tn=getinfo&ct=0&word=流浪记&ie=utf-8&format=json&qq-pf-to=pcqq.group";
+	
+	private String mHttpUrl = "http://mp3.baidu.com/dev/api/";
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_volley_layout);
+
+		mQueue = Volley.newRequestQueue(this);
+
+		mStringBtn = (Button) findViewById(R.id.stringBtn);
+		mContentTxt = (TextView) findViewById(R.id.volleyText);
+
+		mStringBtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				
+				onGetHttpString();
+//				onVolleyGetHttpString();
+			}
+		});
+	}
+	
+	public void onVolleyGetHttpString(){
+		StringRequest stringRequest = new StringRequest(
+				mHttpUrl, new Listener<String>() {
+
+					@Override
+					public void onResponse(String response) {
+						mContentTxt.setText(response);
+					}
+
+				}, new ErrorListener() {
+
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						mContentTxt.setText("错误 :"+error.getMessage());
+					}
+
+				});
+
+		mQueue.add(stringRequest);
+	}
+	
+	
+	public void onVolleyJsonRequest(){
+		JsonObject  jsonRequest = new JsonObject();
+		jsonRequest.addProperty("username", "scxh");
+		JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Method.GET, mHttpRequestString, jsonRequest, 
+				new Listener<JsonObject>() {
+
+			@Override
+			public void onResponse(JsonObject response) {
+				
+			}
+		}, new ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				
+			}
+		});
+	}
+	
+	public void onGetHttpString(){
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("tn", "getinfo");
+		params.put("ct", "0");
+		params.put("word", "流浪记");
+		params.put("ie", "utf-8");
+		params.put("format", "json");
+		params.put("qq-pf-to", "pcqq.group");
+		
+		new HttpConnectionUtil().asyncConnect(mHttpUrl, params,HttpMethod.GET, new HttpConnectionCallback() {
+			
+			@Override
+			public void execute(String response) {
+				mContentTxt.setText(response);
+			}
+		});
+	}
+}

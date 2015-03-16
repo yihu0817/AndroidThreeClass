@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.warmtel.youhui.android"
+    android:versionCode="1133"
+    android:versionName="1.1" >
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <permission
+        android:name="com.warmtel.youhui.android.permission.ACCESS_PROVIDER"
+        android:protectionLevel="signatureOrSystem" />
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-sdk android:minSdkVersion="7" />
+    <!-- Until TestRunner -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="IGEM"
+        android:targetPackage="com.warmtel.youhui.android" />
+    <!-- Until TestRunner -->
+    <application
+        android:name=".NaryouAppication"
+        android:icon="@drawable/naryou_logo"
+        android:label="@string/app_name"
+        android:launchMode="singleTask" >
+
+        <!-- Until TestRunner   Test -->
+        <uses-library android:name="android.test.runner" />
+        <!-- Until TestRunner -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="503b21ed52701537550002a1" />
+        <meta-data
+            android:name="IGEMI_CHANNEL"
+            android:value="igemi_pretang" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="igemi_viktor" />
+
+        <!-- declare the default searchable Activity for the whole app -->
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".ui.nearby.NearSearchListAct" />
+
+        <activity
+            android:name=".ui.main.StartAct"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".provider.NewsInfoService" >
+        </service>
+
+        <activity android:name="com.tencent.weibo.webview.OAuthV2AuthorizeWebView" >
+        </activity>
+        <activity
+            android:name=".ui.main.MainAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantTabAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.FanboyAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.FanboyView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantBaseAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantCouponAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantInfoAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantBranchAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantCommentAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantCommentInAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantImageAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerActivityAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.main.MerchantComentView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.main.PublicityAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.MerchantOtherAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.account.SigninAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.RegisteTabAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.RetrievepwdAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.PhoneRegisteAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.EmailRegisteAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cheap.CheapMainAct"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ui.cheap.CheapBusinessAreaNewAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapTypeListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapBusinessListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapNoInfoAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapIndustryAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapSuperMarketAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.TrademarkAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.TrademarkListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapFavorMarketListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapSuperMarketDetailAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapSuperMarketBranchAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapSuperMarketInfo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapBusinessAreasAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.cheap.CheapBusinessAreaNewsAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.nearby.NearSearchListAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ui.nearby.NearbyListAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.nearby.NearMapListAct"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pocket.PocketListAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pocket.PocketContentAct"
+            android:screenOrientation="portrait" />
+        <!-- 特惠 -->
+        <activity
+            android:name=".ui.favor.FavorMainAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.favor.FavorBusinessAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.favor.FavorEntryAct"
+            android:screenOrientation="portrait" />
+        <!-- Camera -->
+        <activity
+            android:name=".ui.camera.MyCameraActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.more.RotateActivity"
+            android:screenOrientation="portrait" />
+        <!-- 宝箱 -->
+        <activity
+            android:name=".ui.gift.GiftActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.more.MoreListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.LatelyListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.MyCareListAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.AboutUsAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.MerPublisAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.SettingAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.SuggestAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.DeclareAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.SysPushMsgAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.ChangeCityAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PersonCenterAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PersonCenterEditAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PersonCenterPortraitAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PersonCenterPortraitNewAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.AccountSetAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PasswordUpAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.BindingBlogAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PerBindingReAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.more.PhotoAct"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.account.RegisteAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.DialogsActivity"
+            android:theme="@style/android:Theme.Dialog" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100518403" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.6" >
+                </action>
+            </intent-filter>
+        </service>
+        <service android:name=".location.LocationService" />
+
+        <provider
+            android:name=".db.DBProvider"
+            android:authorities="com.warmtel.youhui.android.provider"
+            android:multiprocess="true"
+            android:permission="com.warmtel.youhui.android.permission.ACCESS_PROVIDER" />
+        <provider
+            android:name="com.warmtel.youhui.android.provider.SearchSuggestionSampleProvider"
+            android:authorities="com.warmtel.youhui.android.provider.SearchSuggestionSampleProvider" >
+        </provider>
+
+        <receiver android:name="com.warmtel.youhui.android.provider.LocationReceiver" >
+            <intent-filter>
+                <action android:name="com.warmtel.youhui.intent.action.LOCATION_BAIDU" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+</manifest>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android学习</string>
+    <string name="title_name">第一个Android程序</string>
+    <string name="one_name">第一个元素</string>
+    <string name="two_name">第二个元素</string>
+    <string name="three_name">第三个元素</string>
+    <string name="four_name">第四个元素</string>
+    <string name="five_name">第五个元素</string>
+    <string name="text_bundle">Bundel 为空，请登录界面跳转！</string>
+    <string name="confirm_btn">"确定"</string>
+    <string name="menu_new">"新建"</string>
+    <string name="menu_quit">"退出"</string>
+    <string name="init_text">初始值</string>
+    <string name="user_name">用户名:</string>
+    <string name="view_page_whats_text1">\n微信\n超过1亿人使用的手机应用</string>
+    <string name="search_music_file_start">正在搜索中....</string>
+    <string name="search_music_file_end">搜索完成</string>
+    <string name="dialog_fragment_learn">"DialogFragment学习"</string>
+    <string name="animation_alpha_text">习近平代表？没错！习总书记是党和国家领导人，也是一名全国人大代表。即将拉开帷幕的年度两会，怎能少了他的身影？接下来这十几天中，习近平将与代表委员们一起审议讨论。视点君也将近距离记录习近平代表的两会时间，原汁原味地呈现给小伙伴们。
+
+既然是代表，就要履职，开会、投票，一个也不能少！去年习近平代表的两会日程可是相当的忙！而且除了会上的活动，会外还有很多事情需要他行使党和国家领导人的职责，所以，习大大的两会时间还真是有点儿紧。</string>
+  <!-- 宝箱 -->
+    <string name="gift_get_fail">领取失败，你已失去此次领取机会</string>
+    <string name="gift_disposing">宝箱数据正在处理中</string>
+</resources>

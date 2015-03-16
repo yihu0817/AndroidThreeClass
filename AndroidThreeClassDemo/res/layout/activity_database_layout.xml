@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/showdataTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/insertbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="插入数据" />
+
+    <Button
+        android:id="@+id/selectbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询数据" />
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据" />
+
+    <Button
+        android:id="@+id/updatebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改数据" />
+    
+     <Button
+        android:id="@+id/getContactsbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取联系人数据" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

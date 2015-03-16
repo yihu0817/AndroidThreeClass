@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/itme1"
+            android:drawable="@drawable/m8"/>
+    <item
+            android:id="@+id/itme2"
+            android:drawable="@drawable/item2"
+            android:left="120dp"
+            android:top="120dp"
+            android:bottom="120dp"
+            android:right="120dp"/>
+
+</layer-list>

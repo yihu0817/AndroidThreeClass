@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/newstxt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_bg"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="银河系其实很小，低价房绿壳蛋鸡"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/newsTwotxt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@color/red_bg"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="百度新闻是包含海量资讯的新闻服务平台,真实反映每时每刻的新闻热点。"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/header1Img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xsy" />
+
+            <TextView
+                android:id="@+id/user1Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小沈阳"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/user2Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/xsy"
+            android:text="小沈阳"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:drawableTop="@drawable/xsy"
+            android:text="小沈阳"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="====================="
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_confirm_selector"
+            android:text="确定" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_color_confirm_selector"
+            android:text="取消" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_color_confirm_selector"
+            android:text="Ok" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onBaseNotificationClick"
+        android:text="发送基础通知到常规Activity" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onBaseTedingNotificationClick"
+        android:text="发送基础通知特定Activity" />
+
+    <Button
+        android:id="@+id/notificationone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送自定义通知" />
+
+</LinearLayout>

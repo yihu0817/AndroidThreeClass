@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scxh="http://schemas.android.com/apk/res/com.scxh.android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.scxh.android.ui.custom.TitleView
+        android:id="@+id/customTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scxh:left_text="返回"
+        scxh:title_text="新华新闻" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="系统控件" />
+
+    <com.scxh.android.ui.custom.MyTextView
+        android:id="@+id/piechart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        scxh:myFontSize="24sp"
+        scxh:myText="我的第一个控件设置XML" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        
+    <item
+        android:id="@+id/menu_news"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="新建"/>
+    <item
+        android:id="@+id/menu_exit"
+        android:icon="@android:drawable/ic_input_delete"
+        android:title="退出"/>
+    <item
+        android:id="@+id/menu_edit"
+        android:icon="@android:drawable/ic_input_delete"
+        android:title="编辑">
+        <menu>
+            <item
+                android:id="@+id/sub_menu_news"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="新建"/>
+            <item
+                android:id="@+id/sub_menu_exit"
+                android:icon="@android:drawable/ic_input_delete"
+                android:title="退出"/>
+        </menu>
+    </item>
+
+</menu>

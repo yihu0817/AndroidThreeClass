@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_bg"
+            android:divider="@null"
+            android:visibility="gone" >
+        </TabWidget>
+
+        <RadioGroup
+            android:id="@+id/raidoGroupTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_color_confirm_selector"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/raidoTab1"
+                style="@style/main_tab_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_tab_main"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/raidoTab2"
+                style="@style/main_tab_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_tab_meishi"
+                android:text="美食" />
+
+            <RadioButton
+                android:id="@+id/raidoTab3"
+                style="@style/main_tab_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/btn_tab_yule"
+                android:text="娱乐" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/raidoGroupTab" >
+        </FrameLayout>
+    </RelativeLayout>
+
+</android.support.v4.app.FragmentTabHost>

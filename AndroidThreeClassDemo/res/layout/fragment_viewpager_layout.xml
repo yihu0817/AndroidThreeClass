@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_bg"
+    android:orientation="vertical" >
+
+    <!-- 上边主页面 -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpagerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pagertab"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom" />
+    </android.support.v4.view.ViewPager>
+
+    <!-- 底部菜单页面 -->
+
+    <RadioGroup
+        android:id="@+id/bottomRg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:background="@drawable/maintab_toolbar_bg"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbOne"
+            style="@style/main_tab_bottom"
+            android:layout_marginTop="2.0dip"
+            android:drawableTop="@drawable/icon_pinglun"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rbTwo"
+            style="@style/main_tab_bottom"
+            android:layout_marginTop="2.0dip"
+            android:drawableTop="@drawable/icon_xianshi"
+            android:text="搜索" />
+
+        <RadioButton
+            android:id="@+id/rbThree"
+            style="@style/main_tab_bottom"
+            android:layout_marginTop="2.0dip"
+            android:drawableTop="@drawable/icon_nongjiale"
+            android:text="设置" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/liulqBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式调用浏览器" />
+
+    <Button
+        android:id="@+id/dianhuaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式调用打电话" />
+    
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onStandardClick"
+        android:text="Activity启动方式之标准 standard" />
+     
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSingleTaskClick"
+        android:text="Activity启动方式之标准singleTask" />
+</LinearLayout>

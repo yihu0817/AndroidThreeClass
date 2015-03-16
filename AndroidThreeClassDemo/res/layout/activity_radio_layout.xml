@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="兴趣爱好"
+        android:textSize="22sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButonClick"
+            android:text="看书" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButonClick"
+            android:text="打球" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButonClick"
+            android:text="把妹" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:text="城市选择"
+        android:textSize="22sp" />
+
+    <RadioGroup
+        android:id="@+id/cityRadioBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/chengduBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioCityButonClick"
+            android:text="成都" />
+
+        <RadioButton
+            android:id="@+id/beijingBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioCityButonClick"
+            android:text="北京" />
+
+        <RadioButton
+            android:id="@+id/shanghaiBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioCityButonClick"
+            android:text="上海" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新闻订阅"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/yuelecheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="娱乐" />
+
+        <CheckBox
+            android:id="@+id/junshicheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="军事" />
+
+        <CheckBox
+            android:id="@+id/toutiaocheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="头条" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="提交" />
+
+</LinearLayout>

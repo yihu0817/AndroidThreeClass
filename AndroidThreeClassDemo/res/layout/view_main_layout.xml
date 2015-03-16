@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onLinearLayoutClick"
+            android:text="线型布局LinearLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRelativieLayoutClick"
+            android:text="相对布局RelativeLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onFramLayoutClick"
+            android:text="单帧布局FramLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onAbosoluteLayoutClick"
+            android:text="绝对布局AbosoluteLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onTableLayoutClick"
+            android:text="表格布局TableLayout" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onCodeLayoutClick"
+            android:text="代码布局" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onTextViewClick"
+            android:text="TextView学习" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onActionListnerClick"
+            android:text="Android事件处理" />
+
+        <Button
+            android:id="@+id/editTextoneBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EditText学习" />
+
+        <Button
+            android:id="@+id/lifeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity生命周期" />
+
+        <Button
+            android:id="@+id/radioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioGroup与RadioButton" />
+        
+        <Button
+            android:id="@+id/stateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态保存" />
+        
+        <Button
+            android:id="@+id/intentBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intent隐式调用" />
+        
+        <Button
+            android:id="@+id/adapterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onAdapterClick"
+            android:text="ArrayAdapter" />
+        
+         <Button
+            android:id="@+id/simpeAdapterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onSimpleAdapterClick"
+            android:text="SimpleAdapter" />
+         <Button
+            android:id="@+id/simpeAdapterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onmyBaseAdapterClick"
+            android:text="myBaseAdapter" />
+         
+          <Button
+            android:id="@+id/spinerAdapterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onSpinnerAdapterClick"
+            android:text="SpinerAdapter" />
+    </LinearLayout>
+
+</ScrollView>

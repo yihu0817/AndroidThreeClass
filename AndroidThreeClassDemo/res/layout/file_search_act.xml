@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/background_player_bar"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:id="@+id/TextView_showIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入内容:"
+                android:textColor="@android:color/white"
+                android:textSize="20sp">
+        </TextView>
+
+        <EditText
+                android:id="@+id/input_KEY_EditText"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="mp3"
+                android:textSize="18sp">
+        </EditText>
+
+        <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:gravity="center"
+                android:background="@drawable/shape_text_selector"
+                android:textColor="@android:color/white">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/musicTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:text="音乐文件"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/currentTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="00:00"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"/>
+
+            <TextView
+                    android:id="@+id/totalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="00:00"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp">
+            </TextView>
+
+            <SeekBar
+                    android:id="@+id/playSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:progressDrawable="@drawable/seek_shape"
+                    android:layout_toLeftOf="@id/totalTime"
+                    android:layout_toRightOf="@id/currentTime"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+            <ImageButton
+                    android:id="@+id/precImageBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_player_pre"/>
+
+            <ImageButton
+                    android:id="@+id/nextImageBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_player_next"
+                    android:text="3:40"/>
+
+            <ImageButton
+                    android:id="@+id/playImageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/nextImageBtn"
+                    android:layout_toRightOf="@id/precImageBtn"
+                    android:background="@drawable/backgroud_play2"
+                    android:src="@drawable/player_play"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+            android:id="@+id/resultList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+</LinearLayout>
