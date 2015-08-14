@@ -2,12 +2,9 @@ package com.scxh.android.ui.menu;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.Toast;
 
 import com.scxh.android.R;

@@ -32,6 +32,7 @@ import com.scxh.android.R;
 import com.scxh.android.util.HttpConnectionUtil;
 import com.scxh.android.util.HttpConnectionUtil.HttpConnectionCallback;
 import com.scxh.android.util.HttpConnectionUtil.HttpMethod;
+import com.scxh.android.util.Logs;
 
 public class VolleyActivity extends Activity {
 	private static final String mHttpRequestString = "http://c.m.163.com/nc/article/headline/T1348647909107/0-20.html";
@@ -49,7 +50,7 @@ public class VolleyActivity extends Activity {
 		setContentView(R.layout.activity_volley_layout);
 
 		mQueue = Volley.newRequestQueue(this);
-
+		
 		mStringBtn = (Button) findViewById(R.id.stringBtn);
 		mContentTxt = (TextView) findViewById(R.id.volleyText);
 		mImageView = (ImageView) findViewById(R.id.volleyImageView);
@@ -60,9 +61,9 @@ public class VolleyActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				onVolleyImagerRequest();
+//				onVolleyImagerRequest();
 				
-//				onVolleyJsonRequest();
+				onVolleyJsonRequest();
 //				onGetHttpString();
 //				onVolleyGetHttpString();
 			}
@@ -89,6 +90,9 @@ public class VolleyActivity extends Activity {
 				});
 
 		mQueue.add(stringRequest);
+		
+
+
 	}
 	
 	
@@ -98,7 +102,7 @@ public class VolleyActivity extends Activity {
 
 			@Override
 			public void onResponse(JSONObject response) {
-				
+				Logs.v("json >>> :"+response.toString());
 				try {
 					JSONArray jsonArray = response.getJSONArray("T1348647909107");
 					for(int i = 0; i< jsonArray.length();i++){

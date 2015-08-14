@@ -22,10 +22,10 @@ import com.scxh.android.bean.Model;
 import com.scxh.android.file.FileActivity;
 import com.scxh.android.file.SearchFileAct;
 import com.scxh.android.fragement.ContainerFragmentActivity;
-import com.scxh.android.fragement.FragementSendActivity;
-import com.scxh.android.fragement.FragmentStack;
-import com.scxh.android.fragement.MainFragementsActivity;
-import com.scxh.android.fragement.loading.ImageDetailActivity;
+import com.scxh.android.fragement.communicate.one.MainFragementsActivity;
+import com.scxh.android.fragement.communicate.two.FragementSendActivity;
+import com.scxh.android.fragement.imageloading.ImageDetailActivity;
+import com.scxh.android.fragement.stack.FragmentStack;
 import com.scxh.android.html.HttpUrlConnectionAct;
 import com.scxh.android.html.WebActivity;
 import com.scxh.android.httpimage.HttpImageBitmapActivity;
@@ -122,12 +122,7 @@ public class UIMainDemoActivity extends ListActivity {
 
 	public List<Model> getData() {
 		ArrayList<Model> list = new ArrayList<Model>();
-		list.add(createModel("线型布局LinearLayout", LinearLayoutActivity.class));
-		list.add(createModel("相对布局RelativeLayout", RelativeLayoutActivity.class));
-		list.add(createModel("单帧布局FramLayout", FramLayoutActivity.class));
-		list.add(createModel("绝对布局AbosoluteLayout", AbosoluteActivity.class));
-		list.add(createModel("表格布局TableLayout", TableLayoutActivity.class));
-		list.add(createModel("代码布局", CodeLayoutActivity.class));
+		list.add(createModel("布局学习", LayoutActivity.class));
 		list.add(createModel("基础控件之TextView", ViewTextActivity.class));
 		list.add(createModel("基础控件之EditText", EditTextActivity.class));
 		list.add(createModel("基础控件之RadioGroup与RadioButton", RadioActivity.class));
@@ -152,7 +147,7 @@ public class UIMainDemoActivity extends ListActivity {
 		list.add(createModel("高级控件之ProgressBar", ProgressBarActivity.class));
 		list.add(createModel("高级控件之GridView+网络取图片", UIGridViewHttpAct.class));
 		list.add(createModel("高级控件之WebView", WebActivity.class));
-		list.add(createModel("Android消息处理机制之 Handler", HandlerActivity.class));
+		list.add(createModel("消息处理机制之 Handler", HandlerActivity.class));
 		list.add(createModel("回调机制处理之 CallBack", CallBackActivity.class));
 		list.add(createModel("观察者模式之Observies", ObserviesDemoActivity.class));
 		list.add(createModel("数据存储之DataBase", DataBaseActivity.class));

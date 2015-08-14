@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.communicate.two;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -14,6 +14,7 @@ public class FragementSendActivity extends Activity {
 	private EditText mMessageEdit;
 	private Button mSendBtn;
 	ReceiverFragment receiverFragment;
+
 	@Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
@@ -26,14 +27,18 @@ public class FragementSendActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				
+
 				String message = mMessageEdit.getText().toString();
-				
-				receiverFragment = (ReceiverFragment) ReceiverFragment.newInstance(message);
-				//setArguments()方法给该Fragment对象提供构建参数。它只。在Fragment对象被绑定到它Activity对象之前被调用，
-				//也就是说在构建该Fragment对象之后，应该立即调用。该方法提供的参数会在Fragment对象销毁和创建期间被保留。
-				
-				getFragmentManager().beginTransaction().add(R.id.linerlayout, receiverFragment).commit();
+
+				receiverFragment = (ReceiverFragment) ReceiverFragment
+						.newInstance(message);
+				// setArguments()方法给该Fragment对象提供构建参数。它只在Fragment对象被绑定到
+				//Activity对象之前被调用，
+				// 也就是说在构建该Fragment对象之后，应该立即调用。该方法提供的参数会在Fragment对象
+				//销毁和创建期间被保留。
+
+				getFragmentManager().beginTransaction()
+						.add(R.id.linerlayout, receiverFragment).commit();
 			}
 		});
 

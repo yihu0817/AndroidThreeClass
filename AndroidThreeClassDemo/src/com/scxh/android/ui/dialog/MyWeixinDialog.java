@@ -28,7 +28,6 @@ public class MyWeixinDialog extends AlertDialog {
 			@Override
 			public void onClick(View v) {
 				mContext.finish();
-				
 			}
 		});
 		
@@ -37,7 +36,6 @@ public class MyWeixinDialog extends AlertDialog {
 			@Override
 			public void onClick(View v) {
 				dismiss();
-				
 			}
 		});
 	}

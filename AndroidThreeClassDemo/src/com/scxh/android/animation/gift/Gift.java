@@ -9,7 +9,6 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 
 public class Gift {
-	
 	public int balloonAlpha, boxAlpha;
 	public Bitmap balloon;
 	public Bitmap box;
@@ -125,7 +124,10 @@ public class Gift {
 		this.balloonRect = new RectF(balloonCoord.x, balloonCoord.y, balloonCoord.x+balloonWidth, balloonCoord.y+balloonHeight);
 		this.boxRect = new RectF(boxCoord.x, boxCoord.y, boxCoord.x+boxWidth, boxCoord.y+boxHeight);
 	}
-	
+	/**
+	 * 绘制宝箱主方法
+	 * @param canvas
+	 */
 	public void drawGift(Canvas canvas){
 		if(isLiving){
 		
@@ -135,7 +137,6 @@ public class Gift {
 			mPaint.setAlpha(boxAlpha);
 			canvas.drawBitmap(box, null, boxRect, mPaint);
 			
-//			moveGift();
 		}
 	}
 	

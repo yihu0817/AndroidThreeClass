@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.communicate.one;
 
 import android.app.Activity;
 import android.app.Fragment;

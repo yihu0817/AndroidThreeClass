@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.subclassfragment;
 
 import android.app.Activity;
 import android.app.AlertDialog;

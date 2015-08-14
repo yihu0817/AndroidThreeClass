@@ -43,6 +43,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.scxh.android.LayoutActivity"
+            android:label="布局"
+            android:theme="@style/CustomActionBarTheme" />
+        <activity
             android:name="com.scxh.android.ui.layout.RelativeLayoutActivity"
             android:label="RelativeLayoutActivity"
             android:theme="@style/CustomActionBarTheme" />
@@ -110,7 +114,7 @@
         </activity>
         <activity
             android:name="com.scxh.android.ui.listview.MyBaseAdapterActivity"
-            android:label="MyBaseAdapter" >
+            android:label="响应第一次选中项，其它项不响应" >
         </activity>
         <activity
             android:name="com.scxh.android.ui.spiners.SpinnersActivity"
@@ -215,10 +219,10 @@
             android:name="com.scxh.android.ui.listview.PullToRefreshPageListAct"
             android:label="ListView下拉刷新与第三方库引入学习" />
         <activity
-            android:name="com.scxh.android.fragement.MainFragementsActivity"
+            android:name="com.scxh.android.fragement.communicate.one.MainFragementsActivity"
             android:label="Fragments学习" >
         </activity>
-        <activity android:name="com.scxh.android.fragement.FragementSendActivity" />
+        <activity android:name="com.scxh.android.fragement.communicate.two.FragementSendActivity" />
         <activity android:name="com.scxh.android.ui.tab.TabRadioViewFragmentActivity" >
         </activity>
         <activity android:name="com.scxh.android.ui.tab.TabFragmentActivity" >
@@ -227,24 +231,24 @@
         </activity>
         <activity android:name="com.scxh.android.ui.tab.PagerSildingFragmentActivity" >
         </activity>
-        <activity android:name="com.scxh.android.fragement.FragmentStack" >
+        <activity android:name="com.scxh.android.fragement.stack.FragmentStack" >
         </activity>
         <activity android:name="com.scxh.android.fragement.ContainerFragmentActivity" >
         </activity>
         <activity android:name="com.scxh.android.ui.slidlemenu.SlidenMenuMainAct" >
         </activity>
-        <activity android:name="com.scxh.android.fragement.loading.ImageDetailActivity" >
+        <activity android:name="com.scxh.android.fragement.imageloading.ImageDetailActivity" >
         </activity>
         <activity android:name="com.scxh.android.ui.listview.PullToRefreshActivity" >
         </activity>
         <activity android:name="com.scxh.android.ui.custom.CustomViewAct" >
         </activity>
-        <activity android:name="com.scxh.android.animation.Animation1Activity"/>
-        <activity android:name="com.scxh.android.animation.alpha.CrossfadeActivity"/>
-        <activity android:name="com.scxh.android.animation.gift.GiftActivity"/>
-        <activity android:name="com.scxh.android.ui.surfaceview.BasicSurfaceViewActivity"/>
-        <activity android:name="com.scxh.android.volley.VolleyActivity"/>
-        <activity android:name="com.scxh.android.volley.VolleyCacheActivity"/>
+        <activity android:name="com.scxh.android.animation.Animation1Activity" />
+        <activity android:name="com.scxh.android.animation.alpha.CrossfadeActivity" />
+        <activity android:name="com.scxh.android.animation.gift.GiftActivity" />
+        <activity android:name="com.scxh.android.ui.surfaceview.BasicSurfaceViewActivity" />
+        <activity android:name="com.scxh.android.volley.VolleyActivity" />
+        <activity android:name="com.scxh.android.volley.VolleyCacheActivity" />
 
         <provider
             android:name="com.scxh.android.ui.provider.MyContentProvider"

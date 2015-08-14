@@ -40,13 +40,18 @@ public class Cloud {
 			bound.left = 0;
 		}
 	}
-	
+	/**
+	 * 在画布上绘制白云
+	 * @param canvas
+	 */
 	public void drawCloud(Canvas canvas){
 		canvas.drawBitmap(cloud, x, y, mPaint);
 		
 		moveCloud();
 	}
-	
+	/**
+	 * 控制云移动
+	 */
 	public void moveCloud(){
 		if(moveLeft){
 			if(x > bound.left){

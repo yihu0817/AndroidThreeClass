@@ -3,6 +3,7 @@ package com.scxh.android.html;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -14,11 +15,12 @@ public class WebActivity extends Activity {
 	private WebView mWebView;
 	private String fileUrl = "file:///android_asset/test1.html";
 	private String httpUrl = "http://www.baidu.com";
-	private String httpUrl1 = "http://192.168.1.185:8080/html/index.html";
+	private String httpUrl1 = "http://192.168.1.203/html/index.html";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_webview_layout);
 		mWebView = (WebView) findViewById(R.id.webview1);
 

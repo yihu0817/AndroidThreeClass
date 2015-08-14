@@ -15,8 +15,7 @@ import com.scxh.android.R;
 
 public class TestBroadcastReceiver extends Activity implements
 		View.OnClickListener {
-	private Button mTongTaiReceiverBtn, mJingTaiReceiverBtn,
-			mSystemReceiverBtn;
+	private Button mTongTaiReceiverBtn, mJingTaiReceiverBtn,mSystemReceiverBtn;
 	static final String INTENAL_ACTION_DONGTAI = "com.testBroadcastReceiver.Internal_1";
 	static final String INTENAL_ACTION_JINGTAI = "action.scxh.android.receiver.MyBroadCastReceiver.stop";
 	static final String INTENAL_ACTION_SYSTEM = "com.testBroadcastReceiver.Internal_3";

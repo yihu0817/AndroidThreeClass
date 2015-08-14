@@ -1,4 +1,4 @@
-package com.scxh.android.fragement.loading;
+package com.scxh.android.fragement.imageloading;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

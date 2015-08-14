@@ -150,7 +150,8 @@ public class BitmapGridViewHttpAct extends Activity implements
 	/**
 	 * 通常类似 ListView 与 GridView 等视图组件在使用上面演示的AsyncTask 方法时会同时带来另外一个问题。
 	 * 为了更有效的处理内存，那些视图的子组件会在用户滑动屏幕时被循环使用。如果每一个子视图都触发一个AsyncTask ，
-	 * 那么就无法确保当前视图在结束task时，分配的视图已经进入循环队列中给另外一个子视图进行重用。 而且, 无法确保所有的异步任务能够按顺序执行完毕。
+	 * 那么就无法确保当前视图在结束task时，分配的视图已经进入循环队列中给另外一个子视图进行重用。 而且, 无法确保所有的
+	 * 异步任务能够按顺序执行完毕。
 	 * 
 	 * @param imageUrl
 	 * @param imageView

@@ -50,8 +50,8 @@ public class TabViewActivity extends TabActivity implements OnTabChangeListener{
 		mTabHost.addTab(tabSpec3);
 		
 		mTabHost.setOnTabChangedListener(this);
-
 	}
+	
 	private View createTabView(int tab) {
 		View v = mInflater.inflate(R.layout.tab_tabviewactivity_view, null);
 		TextView titleTxt = (TextView) v.findViewById(R.id.titleTxt);

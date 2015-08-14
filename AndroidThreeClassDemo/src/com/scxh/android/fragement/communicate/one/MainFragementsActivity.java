@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.communicate.one;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -6,7 +6,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.scxh.android.R;
-import com.scxh.android.fragement.ListFragments.OnHeadlineSelectedListener;
+import com.scxh.android.fragement.communicate.one.ListFragments.OnHeadlineSelectedListener;
 
 public class MainFragementsActivity extends Activity implements OnHeadlineSelectedListener{
 	Fragment contentFragment,listFragment;

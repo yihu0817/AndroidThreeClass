@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.scxh.android.fragement.loading;
+package com.scxh.android.fragement.imageloading;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

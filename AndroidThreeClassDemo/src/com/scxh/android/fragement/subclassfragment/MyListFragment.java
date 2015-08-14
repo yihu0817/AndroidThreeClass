@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.subclassfragment;
 
 import com.scxh.android.util.Logs;
 

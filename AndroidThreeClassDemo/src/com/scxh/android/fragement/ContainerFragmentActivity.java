@@ -9,7 +9,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.scxh.android.R;
-import com.scxh.android.fragement.MyListFragment.ShowDialogListFragmentLisner;
+import com.scxh.android.fragement.subclassfragment.ArticleFragment;
+import com.scxh.android.fragement.subclassfragment.MyListFragment;
+import com.scxh.android.fragement.subclassfragment.MyListFragment.ShowDialogListFragmentLisner;
 
 public class ContainerFragmentActivity extends Activity implements
 		ShowDialogListFragmentLisner {

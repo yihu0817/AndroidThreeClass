@@ -26,7 +26,6 @@ public class DownLoadActivity extends Activity implements OnClickListener {
 		mFile2Btn.setOnClickListener(this);
 		mFile3Btn.setOnClickListener(this);
 		mFile4Btn.setOnClickListener(this);
-
 	}
 
 	@Override

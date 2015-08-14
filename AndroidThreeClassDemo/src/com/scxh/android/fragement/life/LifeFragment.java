@@ -1,4 +1,4 @@
-package com.scxh.android.fragement;
+package com.scxh.android.fragement.life;
 
 import android.app.Activity;
 import android.os.Bundle;

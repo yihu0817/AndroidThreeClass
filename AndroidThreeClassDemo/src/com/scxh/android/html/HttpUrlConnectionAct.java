@@ -197,9 +197,10 @@ public class HttpUrlConnectionAct extends Activity {
 	 */
 	private String getDataByHttpClientGetMethod(String httpUrl)
 			throws ClientProtocolException, IOException {
-		String httpurl = httpUrl;// "http://192.168.1.148:8080/ServletProject/firstservlet";
-		String params = "?username=张三&password=123456";
-		String url = httpurl + params;// "http://192.168.1.148:8080/ServletProject/firstservlet?username=scxh&password=123456";
+//		String httpurl = httpUrl;// "http://192.168.1.148:8080/ServletProject/firstservlet";
+//		String params = "?username=张三&password=123456";
+//		String url = httpurl + params;// "http://192.168.1.114:8080/androidtest/textView";
+		String url = "http://192.168.1.114:8080/androidtest/textView";
 
 		StringBuilder sb = new StringBuilder();
 

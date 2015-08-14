@@ -37,46 +37,17 @@ public class MyBaseAdapterActivity extends Activity {
 	private ProgressBar mProgressBar;
 	private LinearLayout mLinearLayout;
 	private MyBaseAdapter mMyBaseAdapter;
-	private SwipeRefreshLayout mSwipeRefreshLayout;
-	
-	private Handler mHandler = new Handler() {
-		public void handleMessage(Message msg) {
-			
-			List<MessageBean> mList = (List<MessageBean>) msg.obj;
-			mMyBaseAdapter.setData(mList);
-			Toast.makeText(MyBaseAdapterActivity.this, "刷新成功!", Toast.LENGTH_SHORT).show();
-			mSwipeRefreshLayout.setRefreshing(false); //停止刷新
-		};
-	};
+	public int mPostion;
+	public boolean isFlag = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_baseadapter_layout);
+		setContentView(R.layout.activity_mybaseadapter_layout);
 
 		mListView = (ListView) findViewById(R.id.mybaselist);
-		mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swip);
 		mProgressBar = (ProgressBar) findViewById(R.id.myProgressBar);
 
-		mSwipeRefreshLayout.setColorScheme(
-				android.R.color.holo_blue_bright,
-				android.R.color.holo_orange_dark,
-				android.R.color.holo_green_dark, android.R.color.holo_red_dark);
-
-		mSwipeRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
-			
-			@Override
-			public void onRefresh() {
-				Logs.v(">>>>>onRefresh>>>>>>>>>>");
-				List<MessageBean> mList = getData();
-
-				Message msg = new Message();
-				msg.obj = mList;
-				mHandler.sendMessageDelayed(msg,3000);
-			}
-		});
-		
-		
 		mMyBaseAdapter = new MyBaseAdapter(this);
 
 		mListView.setAdapter(mMyBaseAdapter);
@@ -84,53 +55,24 @@ public class MyBaseAdapterActivity extends Activity {
 		mLinearLayout = (LinearLayout) findViewById(R.id.progressLayout);
 		mListView.setEmptyView(mLinearLayout);
 
-		GetDataThread mGetDataThread = new GetDataThread();
-		mGetDataThread.start();
+		List<MessageBean> mList = getData();
+		mMyBaseAdapter.setData(mList);
 
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				MyBaseAdapter adapter = (MyBaseAdapter) parent.getAdapter();
-				MessageBean msg = (MessageBean) adapter.getItem(position);
+				if (!isFlag) {
+					mPostion = position;
+					mMyBaseAdapter.notifyDataSetChanged();
+					isFlag = true;
+				}
 
-				String title = msg.getTitle();
-				String content = msg.getContent();
-				int iconInt = msg.getHeaderIcon();
-
-				Intent intent = new Intent(MyBaseAdapterActivity.this,
-						TwoAcitity.class);
-				startActivity(intent);
-
-				Toast.makeText(
-						MyBaseAdapterActivity.this,
-						" position  :" + position + " title :" + msg.getTitle(),
-						Toast.LENGTH_SHORT).show();
+				Toast.makeText(MyBaseAdapterActivity.this,"响应 第一次选中项" + position, Toast.LENGTH_SHORT).show();
 			}
 
 		});
-	}
-
-	class GetDataThread extends Thread {
-		public String mData = "初始值";
-
-		@Override
-		public void run() {
-			super.run();
-
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
-			List<MessageBean> mList = getData();
-
-			Message msg = new Message();
-			msg.obj = mList;
-			mHandler.sendMessage(msg);
-		}
 	}
 
 	class MyBaseAdapter extends BaseAdapter {
@@ -181,48 +123,8 @@ public class MyBaseAdapterActivity extends Activity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			Log.v("tag", "getView position  >>> :" + position
-					+ " convertView  :" + convertView);
-			if (getItemViewType(position) == LIST_TYPE_LEFT) {
-				return getLeftView(position, convertView, parent);
-			} else {
-				return getRightView(position, convertView, parent);
-			}
+			return getLeftView(position, convertView, parent);
 
-		}
-
-		public View getRightView(int position, View convertView,
-				ViewGroup parent) {
-			ViewHolder holder;
-
-			if (convertView == null) {
-				// ====一级优化==缓存View=======
-				convertView = inflater.inflate(
-						R.layout.item_baseadapter_right_view, parent, false);
-
-				// ====二级优化===缓存View对象里的控件=====
-				holder = new ViewHolder(); // 因为View setTag方法只能放一个Object,
-				holder.imageView = (ImageView) convertView
-						.findViewById(R.id.iconimageView);
-				holder.titleTxt = (TextView) convertView
-						.findViewById(R.id.titletextView);
-				holder.infoTxt = (TextView) convertView
-						.findViewById(R.id.infotextView);
-
-				convertView.setTag(holder);
-
-			} else {
-				holder = (ViewHolder) convertView.getTag();
-			}
-
-			// ==========取数据项给View对应控件赋值=============
-			MessageBean msg = (MessageBean) getItem(position);
-
-			holder.imageView.setImageResource(msg.getHeaderIcon());
-			holder.titleTxt.setText(msg.getTitle());
-			holder.infoTxt.setText(msg.getContent());
-			// ===========================================
-			return convertView;
 		}
 
 		public View getLeftView(int position, View convertView, ViewGroup parent) {
@@ -259,27 +161,12 @@ public class MyBaseAdapterActivity extends Activity {
 		}
 
 		@Override
-		public int getViewTypeCount() {
-			return 2;
-		}
-
-		@Override
-		public int getItemViewType(int position) {
-			MessageBean message = (MessageBean) getItem(position);
-			// if(message.getType() == LIST_TYPE_LEFT){
-			// return LIST_TYPE_LEFT;
-			// }else{
-			// return LIST_TYPE_RIGHT;
-			// }
-
-			return message.getType();
-		}
-
-		@Override
 		public boolean isEnabled(int position) {
-			MessageBean message = (MessageBean) getItem(position);
-			if (message.getTitle().contains("黄记")) {
-				return false;
+			if (isFlag == true) {
+				if (mPostion == position)
+					return true;
+				else
+					return false;
 			} else {
 				return true;
 			}

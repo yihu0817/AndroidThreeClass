@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -18,7 +19,7 @@ import android.widget.Toast;
 import com.scxh.android.R;
 import com.scxh.android.util.Logs;
 
-public class FileActivity extends Activity {
+@SuppressLint("NewApi") public class FileActivity extends Activity {
 	private final static String PIC_FILE_NAME = "testpic1.png";
 	private ImageView mImageView;
 
